@@ -1,4 +1,3 @@
-import java.util.Arrays;
 
 public class att_work {
 
@@ -6,7 +5,7 @@ public class att_work {
     private Node[] table;
     private int size;
 
-    public static void main() {
+    public static void main(String[] args) {
 
         att_work hashMap = new att_work();
 
@@ -24,7 +23,6 @@ public class att_work {
         System.out.println("Size after removal: " + hashMap.size());
         
     }
-
 
     public att_work() {
         table = new Node[INITIAL_CAPACITY];
@@ -158,22 +156,5 @@ public class att_work {
             this.value = value;
             this.next = null;
         }
-    }
-
-    public static void main(String[] args) {
-        att_work hashMap = new att_work();
-
-        hashMap.put(1, 10);
-        hashMap.put(2, 20);
-        hashMap.put(3, 30);
-
-        System.out.println("Size: " + hashMap.size());
-        System.out.println("Contains Key 2: " + hashMap.containsKey(2));
-        System.out.println("Contains Value 30: " + hashMap.containsValue(30));
-        System.out.println("Get Value for Key 3: " + hashMap.get(3));
-
-        hashMap.remove(2);
-
-        System.out.println("Size after removal: " + hashMap.size());
     }
 }
